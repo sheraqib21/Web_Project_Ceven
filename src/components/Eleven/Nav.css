@@ -1,0 +1,72 @@
+/* Nav.css */
+
+.nav-bar {
+    position: relative; /* Position relative to allow absolute positioning of shapes */
+    overflow: hidden; /* Hide overflow from shapes */
+    z-index: 10; /* Ensure the nav bar is above the shapes */
+    background-color: rgba(255, 255, 255, 0.623); /* Light background for better visibility */
+    padding: 1rem; /* Add some padding */
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.6; /* Slight transparency */
+    animation: move 8s linear infinite; /* Animation for movement */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.shape:hover {
+    transform: scale(1.1); /* Scale up the shape on hover */
+}
+
+.shape1 {
+    width: 100px; /* Size of the shape */
+    height: 100px; /* Size of the shape */
+    background-color: rgba(0, 255, 136, 0.8); /* Orange color */
+    top: 10%; /* Position from the top */
+    left: 15%; /* Position from the left */
+    border-radius: 50%; /* Make it circular */
+    animation-delay: -2s; /* Delay for the animation */
+}
+
+.shape2 {
+    width: 120px; /* Size of the shape */
+    height: 120px; /* Size of the shape */
+    background-color: rgba(0, 150, 136, 0.8); /* Teal color */
+    top: 40%; /* Position from the top */
+    left: 75%; /* Position from the left */
+    border-radius: 50%; /* Make it circular */
+    animation-delay: 0s; /* No delay for the animation */
+}
+
+.shape3 {
+    width: 80px; /* Size of the shape */
+    height: 80px; /* Size of the shape */
+    background-color: rgba(0, 150, 136); /* Magenta color */
+    top: 60%; /* Position from the top */
+    left: 25%; /* Position from the left */
+    border-radius: 50%; /* Make it circular */
+    animation-delay: -4s; /* Delay for the animation */
+}
+
+.shape4 {
+    width: 150px; /* Size of the shape */
+    height: 150px; /* Size of the shape */
+    background-color: rgba(76, 175, 80, 0.8); /* Green color */
+    top: 80%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    border-radius: 50%; /* Make it circular */
+    animation-delay: -1s; /* Delay for the animation */
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 20px); /* Move to the right and down */
+    }
+    100% {
+        transform: translate(0, 0); /* Return to original position */
+    }
+}

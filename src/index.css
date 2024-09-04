@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    height: 200vh; /* Ensure enough scrolling space */
+    margin: 0;
+  }
+  
+  svg {
+    position: absolute; /* Adjust to absolute to ensure visibility within its container */
+    top: 20%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Ensure SVG is on top of other content */
+  }

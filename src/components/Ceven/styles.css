@@ -1,0 +1,28 @@
+.service-box {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s, box-shadow 0.3s;
+    width: 400px; /* Set the desired width */
+    height: auto; /* Allow height to adjust based on content */
+  }
+  
+  .service-box.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .service-box img {
+    height: 48px; /* Adjust icon size */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Hover effects */
+  .service-box:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    background-color: #f7fafc; /* Light background on hover */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth transition */
+  }
+  
+  
+  

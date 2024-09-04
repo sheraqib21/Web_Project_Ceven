@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:hsl(206, 75%, 49%); stop-opacity:1" />
+      <stop offset="100%" style="stop-color:hsl(331, 90%, 56%); stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(140, 40)">
+    <!-- First "I" -->
+    <path
+      id="firstI"
+      d="M0 0 L0 120 M0 0 L40 0 L40 120 L0 120"
+      stroke="url(#lineGradient)"
+      stroke-width="10"
+      fill="none"
+      stroke-linecap="round"
+      stroke-dasharray="200"
+      stroke-dashoffset="200"
+    />
+    <!-- Second "I" -->
+    <path
+      id="secondI"
+      d="M80 0 L80 120 M80 0 L120 0 L120 120 L80 120"
+      stroke="url(#lineGradient)"
+      stroke-width="10"
+      fill="none"
+      stroke-linecap="round"
+      stroke-dasharray="200"
+      stroke-dashoffset="200"
+    />
+  </g>
+
+  <!-- Include GSAP and ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const svgPaths = gsap.utils.toArray('#firstI, #secondI');
+      
+      gsap.fromTo(svgPaths, 
+        { strokeDasharray: 200, strokeDashoffset: 200 }, 
+        {
+          strokeDashoffset: 0,
+          scrollTrigger: {
+            trigger: '#svgRoot',
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: true
+          }
+        }
+      );
+    });
+  </script>
+</svg>

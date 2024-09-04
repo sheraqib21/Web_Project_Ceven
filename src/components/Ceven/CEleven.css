@@ -1,0 +1,28 @@
+.ticker-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .ticker {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: ticker 20s linear infinite;
+  }
+  
+  .ticker span {
+    padding: 0 2rem;
+  }
+  
+  @keyframes ticker {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

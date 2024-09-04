@@ -1,0 +1,22 @@
+.svg-animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px; /* Adjust as needed for spacing */
+    position: relative; /* Adjusted for better placement */
+    background-color: rgb(0, 0, 0); /* Ensuring the background is not transparent */
+  }
+  
+  .svg-element {
+    width: 1000px; /* Adjust size as needed */
+    height: 200px;
+  }
+  
+  .svg-animation {
+    bottom: 0; /* Adjusted for better placement */
+    
+  }
+  
+
+
+  
